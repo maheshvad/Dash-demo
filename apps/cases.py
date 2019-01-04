@@ -11,16 +11,14 @@ import dash_html_components as html
 import plotly.plotly as py
 from plotly import graph_objs as go
 
-from app import app, indicator, millify, df_to_table, sf_manager
+from app import app, indicator, millify, df_to_table, sf_manager, turvo_manager
 
 colors = {"background": "#F3F6FA", "background_div": "white"}
 
 accounts = sf_manager.get_accounts()
+shipments = turvo_manager.get_shipments()
 contacts = sf_manager.get_contacts()
 users = sf_manager.get_users()
-
-
-
 
 
 # returns pie chart based on filters values
